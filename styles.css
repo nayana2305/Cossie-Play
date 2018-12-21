@@ -1,0 +1,59 @@
+body {
+ --background-image: url(abstract.jpg);
+	background-repeat: no-repeat, repeat;
+	background-position: right bottom, left top;
+	background-color: #CC66FF;
+	height: 900px;
+	color: #010000;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	font-size: medium;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4B4848;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+	background-color: #10C536;
+	font-size: 14px;
+}
+ .navbar {
+      padding-top: 8px;
+      padding-bottom: 8spx;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 2px;
+  }
+
+.fixed-bg {
+    background-image: url();   
+    max-width:100%;
+    max-height:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;

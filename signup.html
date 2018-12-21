@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script language="javascript">
+function valid()
+ {
+ n=document.myform.t1.value;
+  if(n.length==0)
+  {
+    alert("enter name");
+       return false;
+   }
+r1=new RegExp(/[a-z A-z]+$/)
+  if(!r1.test(n))
+   {
+       alert("enter only alphabets");
+     return false;
+  }
+if(n.length<6)
+  {
+    alert("enter name with atleast 6 charecters");
+       return false;
+   }
+ n1=document.myform.p1.value;
+  if(n1.length==0)
+  {
+    alert("enter password");
+       return false;
+   }
+if(n1.length<6)
+  {
+    alert("enter password with atleast 6 charecters");
+       return false;
+   }
+ n2=document.myform.p2.value;
+   if(n2!=n1)
+{
+ alert("passwrods dont match");
+  return false;
+}
+n3=document.myform.t2.value;
+if(n3.length==0)
+  {
+    alert("enter valid email");
+       return false;
+   }
+if(n3.length<6)
+  {
+    alert("enter emial with atleast 6 charecters");
+       return false;
+   }
+ r2=new RegExp(/^[a-z A-z|_]/)
+  if(!r2.test(n3))
+   {
+       alert("enter only alphabets");
+     return false;
+  }
+   if(n3.lastIndexOf('@')>n3.lastIndexOf('.') || n3.indexOf("@")==-1 || n3.indexOf(".")==-1)
+{
+alert("Enter valid email");
+return false;
+}
+n4=document.myform.t3.value;
+  if(n4.length==0)
+{
+  alert("enter phone number");
+  return false;
+}
+ r3=new RegExp(/[0-9]+$/)
+if(!r3.test(n4))
+  { 
+  alert("enter only numbers");
+  return false;
+}
+  if(n4.length!=10)
+{ 
+  alert("enter valid number");
+  return false;
+}
+a=document.myform.r.value;
+  if(a==NULL)
+{  
+  alert("gender not known");
+  return false;
+}
+}
+</script>
+<center>
+<a href="index.html">
+<img src="images/winter-kingdom-798279_1920.jpg" alt="logo" style="width:1028px auto;height:70px;">
+<h2 style="font-family: Comic Sans MS; color: #000;">COSSIE PLAY</h2>
+  
+</a>
+</head>
+
+<body><div class="navbar">
+
+
+<ul>
+ <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="About.html">About Cossieplay</a></li>
+  <li><a href="Contact.html">Contact Us</a></li>
+  <li><a href="Announcements.html">Announcements</a></li>
+  <li><a href="guidelines.html">Guidelines</a></li>
+  <li><a href="PriceSummary.html">PriceSummary</a></li>
+ 
+<li style="float:right"><a href="signup.html">SignUp</a></li>
+<li style="float:right"><a href="link.html">Links</a></li>
+
+</ul>
+</div>
+
+<form name="myform" onsubmit="return valid()" action="msg1.html"  >
+<br><center>
+<hr>
+<table border="0" cellpadding="5">
+<tr>
+   <th colspan="2">REGISTRATION</th>
+</tr>   
+<tr>
+   <td>Contact person name</td>
+   <td><input type="text" name="t1"></td>
+   </tr>
+
+   <td>Phone number</td>
+<td><input type="text" name="t2"></td>
+</tr>
+<tr>
+   <td>Number of people coming</td>
+<td><input type="text" name="t3"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit">
+<input type="reset" value="cancel"></td>
+   </tr>
+</table>
+</center>
+</form>
+
+<hr>
+ <center>
+<footer class="container-fluid bg-4 text-center">
+  <p style="font-size:80%;">Copyright©2018 Cossie Play All Rights Reserved.</p> 
+</footer>
+
+</body>
+</html>
